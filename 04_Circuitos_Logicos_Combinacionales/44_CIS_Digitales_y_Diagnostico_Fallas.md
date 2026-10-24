@@ -1,6 +1,7 @@
+**Índice: [40_Indice_y_Resumen](40_Indice_y_Resumen.md)**
 
-**Indice: [[40_Indice_y_Resumen]]**
-**Seccion anterior: [[43_XOR_XNOR_Paridad_Habilitacion]]**
+**Sección anterior: [43_XOR_XNOR_Paridad_Habilitacion](43_XOR_XNOR_Paridad_Habilitacion.md)**
+
 # CIs digitales y diagnóstico de fallas
 
 ## 4-9 Características básicas de los CIs digitales
@@ -13,7 +14,7 @@ Resistencias, diodos y transistores fabricados en una sola pieza de **silicio (s
 - El chip de silicio es mucho más pequeño que el DIP (~0.05 pulg²) y se conecta con alambres de ~1 mil de diámetro.
 - **PLCC:** terminales en todo el perímetro; para CIs grandes que se pueden sustituir. **La terminal 1 está en el centro de la parte superior, no en la esquina.** Ejemplo: PLD **EPM7128SLC84** de Altera.
 
-![[04_Circuitos_Logicos_Combinacionales/img/29.png]]
+![Fig. 4-29: encapsulados DIP y PLCC](img/29.png)
 
 ### Complejidad de integración (Tabla 4-5)
 
@@ -37,7 +38,7 @@ Resistencias, diodos y transistores fabricados en una sola pieza de **silicio (s
 
 - **CMOS** usa **menos componentes** que TTL (mayor simplicidad, menor tamaño) y domina hoy los CIs de gran escala; TTL se sigue usando mucho en laboratorio por su **resistencia**.
 
-![[04_Circuitos_Logicos_Combinacionales/img/30.png]]
+![Fig. 4-30: familias de CIs digitales](img/30.png)
 
 ### Series TTL (mismo pinout y lógica; cambian velocidad y consumo)
 | Serie | Prefijo | Ejemplo (inversor hex) |
@@ -74,7 +75,7 @@ Resistencias, diodos y transistores fabricados en una sola pieza de **silicio (s
 | **TTL** | 0 – 0.8 V | 0.8 – 2.0 V | 2 – 5 V |
 | **CMOS** (VDD = 5 V) | 0 – 1.5 V | 1.5 – 3.5 V | 3.5 – 5 V |
 
-![[04_Circuitos_Logicos_Combinacionales/img/31.png|429]]
+<img src="img/31.png" width="429" alt="Fig. 4-31: niveles de voltaje de entrada TTL y CMOS">
 
 ### Entradas desconectadas (flotantes)
 - **TTL:** una entrada flotante actúa como **1 lógico** (suele medir 1.4–1.8 V, en el intervalo indeterminado). Útil al diagnosticar, pero **mala práctica** en diseño final (capta ruido).
@@ -87,7 +88,7 @@ Muestran **todas las conexiones eléctricas**: números de terminal, número de 
 3. VCC y tierra se muestran **por CI** (ej. terminal 14 a +5 V y terminal 7 a tierra en un chip de 14 pines).
 4. Entradas a la izquierda, salidas a la derecha. Una **barra sobre el nombre** y **burbujas** indican señales **activas en BAJO**.
 
-![[04_Circuitos_Logicos_Combinacionales/img/32.png|547]]
+<img src="img/32.png" width="547" alt="Fig. 4-32: diagrama de conexiones">
 
 Con **captura de diagramas esquemáticos** (ej. MAX+PLUS de Altera, archivos `.gdf`) los símbolos no llevan terminales ni chips, porque el circuito se **programa en un PLD** en lugar de cablearse con SSI/MSI.
 
@@ -113,8 +114,7 @@ Punta metálica que se toca en un punto del circuito; sus **LEDs** indican el ni
 
 Con rojo/verde + amarillo se puede saber si la señal está **casi siempre en ALTO, en BAJO, o pulsando**.
 
-
-![[34.png]]
+![Fig. 4-34: sonda lógica](img/34.png)
 
 ## 4-11 Fallas internas en los CIs digitales
 
@@ -130,7 +130,7 @@ La terminal queda **atascada en BAJO (o ALTO)**; además **afecta a la señal qu
 ### Salida en corto a tierra / VCC (Fig. c, d)
 La salida queda **atascada en BAJO (o ALTO)** y **no responde** a las entradas. **No afecta** las señales en las entradas del CI.
 
-![[04_Circuitos_Logicos_Combinacionales/img/35.png|400]]
+<img src="img/35.png" width="400" alt="Fig. 4-35: entradas y salidas en corto a tierra o VCC">
 
 **Ejemplo 4-24 (Fig. 4-36):** la salida de un inversor (Z1-4) debería pulsar porque su entrada pulsa, pero está **atascada en BAJO**. Causas posibles:
 1. Falla de un componente interno en el inversor.
@@ -154,7 +154,7 @@ Las dos señales quedan **idénticas**. Si dos señales que deberían ser distin
 - **Colisión de señales (contención):** una salida intenta ALTO y la otra BAJO "luchando". El nivel resultante depende del CI: en **TTL** suele quedar cerca de **0.8 V** (extremo alto del 0, o indeterminado); en **CMOS**, en el intervalo **indeterminado**.
 - **Señal con tres niveles distintos** → sospecha de dos salidas en corto.
 
-![[04_Circuitos_Logicos_Combinacionales/img/39.png|564]]
+<img src="img/39.png" width="564" alt="Fig. 4-39: corto entre dos terminales">
 
 ## 4-12 Fallas externas
 
@@ -173,7 +173,6 @@ Fuerzan dos señales a ser iguales, o una a tierra/VCC. Causas: **alambrado mal 
 
 ### Carga de la señal de salida (loading)
 Si una salida alimenta **demasiadas entradas**, se excede su **corriente nominal** y su voltaje puede caer al **intervalo indeterminado**. Normalmente es un error de diseño o conexión.
-
 
 ## 4-13 Ejemplo práctico de diagnóstico (ejemplo 4-28, Fig. 4-41)
 
@@ -195,15 +194,8 @@ Con A = B = 0 y C = 1, la sonda muestra que las NAND son correctas, pero la **XO
 4. Si no se ve corto externo, quedan tres cortos internos (Z1-3, Z2-13, Z2-5): **desconectar cada terminal sospechosa del nodo X, una a una**, y volver a medir contra VCC. Al desconectar la culpable, el corto desaparece.
    - Con CIs en **zócalo**: sacar el CI, doblar la terminal y reinsertarlo. Si está **soldado**: cortar la pista y repararla después.
 
-![[04_Circuitos_Logicos_Combinacionales/img/41.png]]
+![Fig. 4-41: circuito del ejemplo de diagnóstico](img/41.png)
 
 > **Idea general:** compara **lo observado con lo esperado**, lista **todas las causas posibles** y diseña pruebas que vayan **descartando** hipótesis, de la más barata y probable a la más invasiva.
 
-
-
-
-
-
-
-
-**Siguiente seccion: [[45_PLD_y_HDL_VHDL]]**
+**Siguiente sección: [45_PLD_y_HDL_VHDL](45_PLD_y_HDL_VHDL.md)**
