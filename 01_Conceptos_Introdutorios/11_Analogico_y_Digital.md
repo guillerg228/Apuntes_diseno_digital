@@ -41,7 +41,7 @@
 
 ### Fig. 1-1: control de temperatura (flujo)
 
-![Fig. 1-10: transmisión en paralelo vs. serie](01_Conceptos_Introdutorios/img/1.png)
+![Fig. 1-10: transmisión en paralelo vs. serie](img/1.png)
 
 ### Ejemplo: grabación de audio (CD)
 Micrófono (señal analógica) → **ADC** → información digital en el CD → reproductor lee → **DAC** → amplificador → bocina.
