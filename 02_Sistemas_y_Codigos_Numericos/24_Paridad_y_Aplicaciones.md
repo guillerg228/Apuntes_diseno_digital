@@ -1,6 +1,5 @@
-
-**Indice: [[20_Indice_y_Resumen]]**
-**Seccion anterior: [[23_Byte_Nibble_Palabra_y_ASCII]]**
+**Índice: [20_Indice_y_Resumen](20_Indice_y_Resumen.md)**
+**Sección anterior: [23_Byte_Nibble_Palabra_y_ASCII](23_Byte_Nibble_Palabra_y_ASCII.md)**
 # Paridad y aplicaciones
 
 ## 2-9 Método de paridad para detección de errores
@@ -8,7 +7,7 @@
 ### ¿Por qué hay errores?
 Al transmitir datos (enlace de microondas, memoria externa, módem/Internet…) el **ruido eléctrico** (fluctuaciones espurias de voltaje/corriente) puede alterar un nivel lógico y el receptor interpreta mal un bit. Aunque la probabilidad es muy baja, con millones de bits por segundo ocurre ocasionalmente.
 
-![[02_Sistemas_y_Codigos_Numericos/img/4.png]]
+![Ruido en el punto x](img/4.png)
 *El ruido en el punto x cambia el nivel lógico del bit recibido.*
 
 ### Bit de paridad
@@ -38,7 +37,7 @@ Bit **extra** que se agrega al código para que el total de 1s tenga cierta cara
 | A | 1000001 | 2 | 0 | 0100 0001 |
 
 
-## 2-10 Aplicaciones de los temas vistos en desde 2-1
+## 2-10 Aplicaciones de los temas vistos desde 2-1
 
 **Aplicación 2-1 – Capacidad de un CD-ROM:** 650 MB × 2²⁰ × 8 bits = **5,452,595,200 bits** (mega = 2²⁰ en sistemas digitales).
 
@@ -62,6 +61,4 @@ Bit **extra** que se agrega al código para que el total de 1s tenga cierta cara
 bit de paridad · byte · códigos alfanuméricos · código binario directo · BCD · ASCII · código Gray · método de paridad · nibble · palabra · sistema numérico hexadecimal · tamaño de palabra
 
 
-
-
-**Siguiete capitulo: [[30_Indice_y_Resumen]]**
+**Siguiete capitulo: [20_Indice_y_Resumen](30_Indice_y_Resumen.md)**
