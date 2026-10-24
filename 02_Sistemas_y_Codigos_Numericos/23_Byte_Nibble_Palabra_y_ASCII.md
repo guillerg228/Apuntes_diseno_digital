@@ -1,6 +1,5 @@
-
-**Indice: [[20_Indice_y_Resumen]]**
-**Seccion anterior: [[23_Byte_Nibble_Palabra_y_ASCII]]**
+**Índice: [20_Indice_y_Resumen](20_Indice_y_Resumen.md)**
+**Sección anterior: [23_Byte_Nibble_Palabra_y_ASCII](23_Byte_Nibble_Palabra_y_ASCII.md)**
 # Byte, nibble, palabra y ASCII
 
 ## 2-7 Byte, nibble y palabra
@@ -29,7 +28,7 @@ Representan **letras, números, signos de puntuación y funciones de control** (
 - Se guarda como **byte** agregando un 0 al MSB (**relleno con 0s**).
 - Para obtener el binario: convertir el valor hex a binario y tomar los 7 bits menos significativos.
 
-**Ejemplo 2-13:** `\` = 5C₁₆ = 0101 1100 → ASCII de 7 bits = **1011100**. 
+**Ejemplo 2-13:** `\` = 5C₁₆ = 0101 1100 → ASCII de 7 bits = **1011100**.
 
 ### Referencia rápida (Tabla 2-4 condensada)
 
@@ -52,8 +51,6 @@ Otros útiles: `!`=21 · `#`=23 · `$`=24 · `(`=28 · `)`=29 · `+`=2B · `-`=2
 - Minúscula = mayúscula + `20₁₆` (ej. `A`=41, `a`=61).
 - Los códigos 00–1F son caracteres de control (no imprimibles).
 
-![[4t.png]]
+![4t](img/4t.png)
 
-
-
-**Siguiente seccion: [[24_Paridad_y_Aplicaciones]]**
+**Siguiente sección: [24_Paridad_y_Aplicaciones](24_Paridad_y_Aplicaciones.md)**
