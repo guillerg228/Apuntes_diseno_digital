@@ -1,6 +1,7 @@
+**Índice: [30_Indice_y_Resumen](30_Indice_y_Resumen.md)**
 
-**Indice: [[30_Indice_y_Resumen]]**
-**Seccion anterior: [[34_Simbolos_Alternos_Activo_Bajo_IEEE]]**
+**Sección anterior: [34_Simbolos_Alternos_Activo_Bajo_IEEE](34_Simbolos_Alternos_Activo_Bajo_IEEE.md)**
+
 # HDL y VHDL
 
 ## 3-17 HDL vs. lenguaje de programación
@@ -19,7 +20,7 @@
 
 **Ejemplo 3-25 (y = AB):** el circuito es una AND y responde en ~10 ns; una computadora necesita 2–3 instrucciones (~20 ns c/u → 40–60 ns): ¿A en ALTO? ¿B en ALTO? → poner y en ALTO o BAJO → repetir.
 
-![[03_Descripcion_de_Circuitos_Logicos/img/43.png|530]]
+<img src="img/43.png" width="530" alt="Fig. 3-43: circuito AND vs. programa en computadora">
 
 > **Idea clave:** en VHDL **no "ejecutas" código**, **describes hardware**. Cada línea es un pedazo de circuito que existe en paralelo con los demás.
 
@@ -32,8 +33,7 @@
   2. El **compilador** lo traduce a un **patrón de 1s y 0s** (la matriz de conexiones).
   3. Ese patrón se **carga en el PLD**.
 
-
-![[03_Descripcion_de_Circuitos_Logicos/img/44.png|485]]
+<img src="img/44.png" width="485" alt="Fig. 3-44: matriz de conexiones de un PLD">
 
 ## 3-19 Formato y sintaxis
 
@@ -46,10 +46,9 @@ Toda descripción de hardware, en cualquier HDL, tiene **dos partes**:
 
 Además: **encabezado** (proyecto, autor, fecha) y **comentarios**.
 
-![[03_Descripcion_de_Circuitos_Logicos/img/45.png|591]]
+<img src="img/45.png" width="591" alt="Fig. 3-45: formato de una descripción en HDL">
 
-![[03_Descripcion_de_Circuitos_Logicos/img/46.png|256]]
-
+<img src="img/46.png" width="256" alt="Fig. 3-46: bloque con entradas y salidas">
 
 ### Código 1: compuerta AND
 
@@ -85,7 +84,8 @@ END ckt;
 
 Son puntos **internos** del circuito que no son entradas ni salidas (como los nodos o puntos de prueba de un esquemático). Solo existen **dentro del bloque**. Ejemplo: `y = m + c` donde `m = a·b`.
 
-![[03_Descripcion_de_Circuitos_Logicos/img/49.png]]
+![Fig. 3-49: señal intermedia m](img/49.png)
+
 ### Código 2: señal intermedia
 
 ```vhdl
@@ -145,6 +145,4 @@ y <= NOT (a OR b);        -- NOR escrito con NOT: y = (a + b)'
 ## Términos importantes
 ARCHITECTURE · asignación concurrente (`<=`) · BIT · compilador · concurrente · ENTITY · HDL · IEEE (VHDL estandarizado) · modo (`IN`/`OUT`) · PLD · PORT · SIGNAL · sintaxis · tipo · VHDL
 
-
-
-**Siguiete capitulo: [[40_Indice_y_Resumen]]**
+**Siguiente capítulo: [40_Indice_y_Resumen](../04_Circuitos_Combinacionales/40_Indice_y_Resumen.md)**
