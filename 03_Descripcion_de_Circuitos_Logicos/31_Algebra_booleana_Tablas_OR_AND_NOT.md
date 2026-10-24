@@ -1,6 +1,6 @@
+**Índice: [30_Indice_y_Resumen](30_Indice_y_Resumen.md)**
 
-**Indice: [[30_Indice_y_Resumen]]**
-# Algebra booleana, tablas de verdad, OR, AND, NOT
+# Álgebra booleana, tablas de verdad, OR, AND, NOT
 
 ## Introducción: qué es el álgebra booleana
 - **George Boole (1854)**, *Una investigación sobre las leyes del pensamiento*: decisiones lógicas con base en circunstancias verdaderas/falsas.
@@ -34,7 +34,8 @@ Las **compuertas lógicas** son circuitos (diodos, transistores, resistencias) q
 Lista **todas las combinaciones** de entradas y la salida resultante.
 - Con **N entradas → 2^N combinaciones** (2 entradas: 4; 3: 8; 4: 16; 5: 32).
 - Se listan en **orden de conteo binario** para no omitir ninguna.
-![[03_Descripcion_de_Circuitos_Logicos/img/1.png|581]]
+
+<img src="img/1.png" width="581" alt="Tabla de verdad: combinaciones de entradas">
 
 ## 3-3 Operación OR y compuerta OR
 
@@ -49,7 +50,8 @@ Lista **todas las combinaciones** de entradas y la salida resultante.
 | 0   | 1   | 1         |
 | 1   | 0   | 1         |
 | 1   | 1   | 1         |
-![[03_Descripcion_de_Circuitos_Logicos/img/2.png|484]]
+
+<img src="img/2.png" width="484" alt="Compuerta OR">
 
 **Resumen OR:** (1) salida 1 si cualquier entrada es 1; (2) la compuerta OR realiza la operación; (3) se lee "x es igual a A OR B".
 
@@ -58,7 +60,7 @@ Lista **todas las combinaciones** de entradas y la salida resultante.
 - Si dos entradas cambian casi a la vez (una baja, otra sube), puede aparecer una **deformación (glitch)** en la salida por la región indefinida en la transición.
 - Si otra entrada se mantiene en ALTO, **no aparece el glitch** (esa entrada manda).
 
-![[03_Descripcion_de_Circuitos_Logicos/img/5.png]]
+![Diagramas de tiempos con compuerta OR](img/5.png)
 
 ## 3-4 Operación AND y compuerta AND
 
@@ -75,7 +77,7 @@ Lista **todas las combinaciones** de entradas y la salida resultante.
 
 Con 3 entradas: x = ABC (1 solo en 111). Con 4: x = ABCD.
 
-![[03_Descripcion_de_Circuitos_Logicos/img/7.png|450]]
+<img src="img/7.png" width="450" alt="Compuerta AND">
 
 **Resumen AND:** (1) opera como multiplicación; (2) la compuerta AND realiza la operación; (3) salida 1 solo si todas las entradas son 1; (4) x = AB se lee "x es igual a A AND B".
 
@@ -94,7 +96,8 @@ Con 3 entradas: x = ABC (1 solo en 111). Con 4: x = ABCD.
 |---|---|
 | 0 | 1 |
 | 1 | 0 |
-![[03_Descripcion_de_Circuitos_Logicos/img/11.png|476]]
+
+<img src="img/11.png" width="476" alt="Compuerta NOT (inversor)">
 
 **Aplicación 3-1 (botón):** un botón cableado da 1 al oprimirse; un inversor da una señal verdadera cuando **no** está oprimido.
 
@@ -107,4 +110,4 @@ Con 3 entradas: x = ABC (1 solo en 111). Con 4: x = ABCD.
 | 1+0=1 | 1·0=0 | |
 | 1+1=1 | 1·1=1 | |
 
-**Siguiente seccion: [[32_Evaluacion_de_Expresiones_NOR_NAND]]**
+**Siguiente sección: [32_Evaluacion_de_Expresiones_NOR_NAND](32_Evaluacion_de_Expresiones_NOR_NAND.md)**
