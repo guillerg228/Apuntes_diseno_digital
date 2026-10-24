@@ -64,13 +64,13 @@ Un número decimal de 8 dígitos en BCD = **32 bits**.
 - Cada bit binario = comparar el **bit binario anterior (izquierda)** con el bit Gray correspondiente: **iguales → 0, diferentes → 1**.
   - B2 = G2 · B1 = B2 ⊕ G1 · B0 = B1 ⊕ G0
 
-![Fig. 2-2: conversión (a) binario a Gray y (b) Gray a binario](02_Sistemas_y_Codigos_Numericos/img/2.png)
+![Fig. 2-2: conversión (a) binario a Gray y (b) Gray a binario](img/2.png)
 *Fig. 2-2 – Conversión entre binario y Gray con comparaciones tipo XOR.*
 
 ### Aplicación principal: codificadores de posición de eje
 Un disco giratorio produce un código binario según su posición angular. Con código Gray, al pasar de un segmento al siguiente solo cambia un bit, evitando lecturas erróneas en los límites.
 
-![Fig. 2-3: codificador de eje de 8 posiciones y 3 bits|516](02_Sistemas_y_Codigos_Numericos/img/3.png)
+![Fig. 2-3: codificador de eje de 8 posiciones y 3 bits|516](img/3.png)
 
 **Ejemplos (repaso 2-5):** 0101 (binario) → **0111** (Gray) · 0101 (Gray) → **0110** (binario).
 
