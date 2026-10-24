@@ -1,6 +1,7 @@
+**Índice: [30_Indice_y_Resumen](30_Indice_y_Resumen.md)**
 
-**Indice: [[30_Indice_y_Resumen]]**
-**Seccion anterior: [[32_Evaluacion_de_Expresiones_NOR_NAND]]**
+**Sección anterior: [32_Evaluacion_de_Expresiones_NOR_NAND](32_Evaluacion_de_Expresiones_NOR_NAND.md)**
+
 # Teoremas booleanos, DeMorgan y universalidad
 
 ## 3-10 Teoremas booleanos
@@ -19,7 +20,7 @@ Sirven para **simplificar** expresiones → circuitos con menos compuertas y con
 | 7   | `x + x = x`  |                                     |
 | 8   | `x + x' = 1` | siempre uno de los dos es 1         |
 
-![[03_Descripcion_de_Circuitos_Logicos/img/25.png]]
+![Fig. 3-25: teoremas de una sola variable](img/25.png)
 
 ### Varias variables
 
@@ -43,11 +44,10 @@ Sirven para **simplificar** expresiones → circuitos con menos compuertas y con
 ### Ejemplos de simplificación
 **3-13:** `y = ABD + ABD'` → `AB(D + D') = AB · 1 =` **AB**
 
-**3-14:** `z = (A' + B)(A + B)` 
+**3-14:** `z = (A' + B)(A + B)`
 = AA' + AB + A'B + BB = 0 + AB + A'B + B = B(A + A' + 1) = **B**
 
 **3-15:** `x = ACD + A'BCD`  → `CD(A + A'B)` → por 15a `CD(A + B)` = **ACD + BCD**
-
 
 ## 3-11 Teoremas de DeMorgan
 
@@ -64,15 +64,15 @@ Válidos para **cualquier número de variables** y para x, y que sean expresione
 - `(x + y + z)' = x'y'z'`
 - `(xyz)' = x' + y' + z'`
 - `(AB + C)' = (AB)'·C' = (A' + B')C' = A'C' + B'C'`
-- `((A + C)(B + D))' = (A + C)' + (B + D)' = A'C' + B'D'` 
+- `((A + C)(B + D))' = (A + C)' + (B + D)' = A'C' + B'D'`
 
 ### Interpretación con circuitos
 - **Teorema 16:** una **NOR** ≡ una **AND con inversores (burbujas) en sus entradas**.
 - **Teorema 17:** una **NAND** ≡ una **OR con burbujas en sus entradas**.
 
-![[03_Descripcion_de_Circuitos_Logicos/img/26.png]]
+![Fig. 3-26: equivalencia NOR y AND con entradas negadas](img/26.png)
 
-![[03_Descripcion_de_Circuitos_Logicos/img/27.png|524]]
+<img src="img/27.png" width="524" alt="Fig. 3-27: equivalencia NAND y OR con entradas negadas">
 
 **Ejemplo 3-17:** `z = (A·B·C')'` → DeMorgan → `A' + B' + C'' =` **A' + B' + C**
 
@@ -80,7 +80,7 @@ Válidos para **cualquier número de variables** y para x, y que sean expresione
 
 Con **solo NAND** (o **solo NOR**) se puede construir cualquier circuito lógico.
 
-### Con compuertas NAND 
+### Con compuertas NAND
 
 | Función | Construcción |
 |---|---|
@@ -88,7 +88,7 @@ Con **solo NAND** (o **solo NOR**) se puede construir cualquier circuito lógico
 | **AND** | NAND seguida de otra NAND como inversor: `((AB)')' = AB` |
 | **OR** | invertir A y B con NAND y meterlas a otra NAND: `(A'B')' = A + B` (DeMorgan) |
 
-![[03_Descripcion_de_Circuitos_Logicos/img/29.png]]
+![Fig. 3-29: NOT, AND y OR con compuertas NAND](img/29.png)
 
 ### Con compuertas NOR
 
@@ -98,7 +98,7 @@ Con **solo NAND** (o **solo NOR**) se puede construir cualquier circuito lógico
 | **OR**  | NOR seguida de NOR como inversor: `((A + B)')' = A + B`                    |
 | **AND** | invertir A y B con NOR y meterlas a otra NOR: `(A' + B')' = AB` (DeMorgan) |
 
-![[03_Descripcion_de_Circuitos_Logicos/img/30.png]]
+![Fig. 3-30: NOT, OR y AND con compuertas NOR](img/30.png)
 
 ### Circuitos integrados TTL disponibles (cada uno **cuádruple**: 4 compuertas por chip):
 
@@ -108,16 +108,13 @@ Con **solo NAND** (o **solo NOR**) se puede construir cualquier circuito lógico
 | 74LS08 | AND |
 | 74LS32 | OR |
 | 74LS02 | NOR |
-![[03_Descripcion_de_Circuitos_Logicos/img/31.png|541]]
+
+<img src="img/31.png" width="541" alt="Fig. 3-31: circuito x = AB + CD con AND y OR">
 
 - **Implementación directa:** 2 AND + 1 OR → **2 CI** (74LS08 + 74LS32).
 - **Con NAND:** reemplazando AND/OR por sus equivalentes con NAND aparecen pares de inversores en serie que se **eliminan** (doble inversión). Queda:
   `x = ((AB)'·(CD)')' = AB + CD` con solo **3 NAND de 2 entradas → 1 solo CI (74LS00)** más eficiente.
 
-![[03_Descripcion_de_Circuitos_Logicos/img/32.png|516]]
+<img src="img/32.png" width="516" alt="Fig. 3-32: circuito x = AB + CD con tres NAND">
 
-
-
-
-
-**Siguiente seccion: [[34_Simbolos_Alternos_Activo_Bajo_IEEE]]**
+**Siguiente sección: [34_Simbolos_Alternos_Activo_Bajo_IEEE](34_Simbolos_Alternos_Activo_Bajo_IEEE.md)**
