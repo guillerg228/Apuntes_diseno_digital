@@ -1,5 +1,4 @@
-
-**Capitulo anterior: [[20_Indice_y_Resumen]]**
+**Capítulo anterior: [20_Indice_y_Resumen](../02_Sistemas_y_Codigos_Numericos/20_Indice_y_Resumen.md)**
 
 # Cap. 3 – Descripción de los circuitos lógicos: índice y resumen
 
@@ -10,11 +9,11 @@
 
 | Archivo                                   | Secciones   | Contenido                                                                            |
 | ----------------------------------------- | ----------- | ------------------------------------------------------------------------------------ |
-| [[31_Algebra_booleana_Tablas_OR_AND_NOT]] | 3-1 a 3-5   | Variables booleanas, **tablas de verdad**, **OR, AND, NOT**, formas de onda          |
-| [[32_Evaluacion_de_Expresiones_NOR_NAND]] | 3-6 a 3-9   | Expresiones de circuitos, precedencia, evaluación, tabla de análisis, **NOR y NAND** |
-| [[33_Teoremas_Demorgan_y_Universalidad]]  | 3-10 a 3-12 | **Teoremas booleanos (1–15)**, **DeMorgan (16, 17)**, **NAND/NOR universales**       |
-| [[34_Simbolos_Alternos_Activo_Bajo_IEEE]] | 3-13 a 3-16 | **Símbolos alternos**, activo en ALTO/BAJO, IEEE/ANSI, 6 métodos de descripción      |
-| [[35_HDL_VHDL]]                           | 3-17 a 3-20 | **HDL/VHDL**: ENTITY/ARCHITECTURE, señales intermedias, operadores (+ extras)        |
+| [31_Algebra_booleana_Tablas_OR_AND_NOT](31_Algebra_booleana_Tablas_OR_AND_NOT.md) | 3-1 a 3-5   | Variables booleanas, **tablas de verdad**, **OR, AND, NOT**, formas de onda          |
+| [32_Evaluacion_de_Expresiones_NOR_NAND](32_Evaluacion_de_Expresiones_NOR_NAND.md) | 3-6 a 3-9   | Expresiones de circuitos, precedencia, evaluación, tabla de análisis, **NOR y NAND** |
+| [33_Teoremas_Demorgan_y_Universalidad](33_Teoremas_Demorgan_y_Universalidad.md)   | 3-10 a 3-12 | **Teoremas booleanos (1–15)**, **DeMorgan (16, 17)**, **NAND/NOR universales**       |
+| [34_Simbolos_Alternos_Activo_Bajo_IEEE](34_Simbolos_Alternos_Activo_Bajo_IEEE.md) | 3-13 a 3-16 | **Símbolos alternos**, activo en ALTO/BAJO, IEEE/ANSI, 6 métodos de descripción      |
+| [35_HDL_VHDL](35_HDL_VHDL.md)                                                     | 3-17 a 3-20 | **HDL/VHDL**: ENTITY/ARCHITECTURE, señales intermedias, operadores (+ extras)        |
 
 ## Hoja de repaso rápida
 
@@ -83,7 +82,7 @@ BEGIN  y <= a AND b;  END ckt;
 - Dibujar una NAND "mal" porque se olvida que su símbolo alternativo es una **OR con burbujas en las entradas**.
 - En VHDL, mezclar `AND` y `OR` sin paréntesis.
 
-## Resumen oficial del capítulo (versión corta)
+## Resumen del capítulo (versión corta)
 1. El álgebra booleana es la herramienta matemática para analizar y diseñar circuitos digitales.
 2. Operaciones básicas: **OR, AND, NOT**.
 3. OR: ALTO con cualquier entrada en ALTO. AND: ALTO solo con todas en ALTO. NOT: nivel opuesto.
@@ -97,22 +96,5 @@ BEGIN  y <= a AND b;  END ckt;
 11. Toda descripción en HDL tiene **definición de entradas/salidas** + **operación**.
 12. Hay **nodos ocultos / señales locales** inaccesibles desde fuera.
 
-## Imágenes recomendadas (en `cap03/img/`)
-Ya están referenciadas en los .md; las más valiosas:
 
-| Imagen | Archivo |
-|---|---|
-| `fig-3-33-simbolos-estandar-alternos.png` | `04-...` (**la más importante** del capítulo) |
-| `fig-3-41-simbolos-ieee-ansi.png` | `04-...` |
-| `fig-3-2-compuerta-or.png`, `fig-3-7-compuerta-and.png`, `fig-3-11-inversor.png` | `01-...` |
-| `fig-3-19-3-22-nor-nand.png` | `02-...` |
-| `fig-3-26-3-27-demorgan.png`, `fig-3-29-3-30-universalidad.png`, `fig-3-25-teoremas-una-variable.png` | `03-...` |
-| `fig-3-36-tres-nand-representaciones.png`, `fig-3-42-metodos-descripcion.png` | `04-...` |
-| `fig-3-44-matriz-conexiones-pld.png`, `fig-3-45-3-46-formato-hdl.png`, `fig-3-49-senal-intermedia.png` | `05-...` |
-
-> Ojo: en este capítulo las barras de negación se perdieron al extraer el PDF; las expresiones marcadas con 🔧 en los archivos 02 y 03 conviene verificarlas contra el libro.
-
-
-
-
-**Siguiente capitulo: [[40_Indice_y_Resumen]]**
+**Siguiente capítulo: [40_Indice_y_Resumen](../04_Circuitos_Combinacionales/40_Indice_y_Resumen.md)**
