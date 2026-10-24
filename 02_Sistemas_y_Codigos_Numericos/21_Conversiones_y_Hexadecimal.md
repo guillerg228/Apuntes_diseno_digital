@@ -32,7 +32,7 @@ Dividir entre 2 y anotar el **residuo** hasta que el cociente sea 0. **Primer re
 25₁₀ = 11001₂
 ```
 
-![Fig. 2-1: diagrama de flujo de la división repetida|368](02_Sistemas_y_Codigos_Numericos/img/1.png)
+![Fig. 2-1: diagrama de flujo de la división repetida|368](img/1.png)
 *Algoritmo de división repetida. Sirve para convertir a **cualquier base** (2, 16, etc.).*
 
 ### Alcance de conteo
