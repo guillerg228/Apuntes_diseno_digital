@@ -1,6 +1,7 @@
+**Índice: [40_Indice_y_Resumen](40_Indice_y_Resumen.md)**
 
-**Indice: [[40_Indice_y_Resumen]]**
-**Seccion anterior: [[42_Mapas_de_Karnaugh]]**
+**Sección anterior: [42_Mapas_de_Karnaugh](42_Mapas_de_Karnaugh.md)**
+
 # XOR, XNOR, paridad y habilitación
 
 > **Notación:** `A'` = A negada; `⊕` = XOR.
@@ -23,7 +24,7 @@
 - IEEE/ANSI: rectángulo con `=1` (activa en ALTO solo cuando **una** entrada está en ALTO).
 - CIs: chips con **cuatro compuertas XOR** (ej. 7486 en TTL, 74HC86 en CMOS).
 
-![[04_Circuitos_Logicos_Combinacionales/img/20.png|606]]
+<img src="img/20.png" width="606" alt="Fig. 4-20: compuerta XOR">
 
 ### XNOR
 - Opuesta a la XOR: `x = AB + A'B' = (A ⊕ B)'`.
@@ -40,7 +41,7 @@
 
 - Los CIs XNOR comerciales tienen salidas especiales que limitan su uso, así que es común obtener la función **XNOR con una XOR + un inversor**.
 
-![[04_Circuitos_Logicos_Combinacionales/img/21.png|569]]
+<img src="img/21.png" width="569" alt="Fig. 4-21: compuerta XNOR">
 
 ### XOR como "inversor controlado" (ejemplo 4-16)
 - Cuando **B = 0**, la salida **sigue a A**.
@@ -55,13 +56,13 @@ La salida debe ser 1 solo si `x1 = y1` **y** `x0 = y0`.
   - `XNOR(x0, y0)` = 1 si los bits bajos son iguales
   - Una **AND** de ambas salidas → **z = 1 cuando los dos números son iguales**.
 
-![[04_Circuitos_Logicos_Combinacionales/img/23.png|547]]
+<img src="img/23.png" width="547" alt="Fig. 4-23: comparador de igualdad de dos números de 2 bits">
 
 ### Ejemplo 4-18: XNOR escondida al factorizar
 Al factorizar puede aparecer `BC + B'C'`. **No es 1**; sería 1 solo si fuera `BC + BC'`. **`BC + B'C' = B ⊙ C` (XNOR).**
 - Reimplementar con una XNOR simplifica el circuito (menos entradas por compuerta, y se eliminan dos inversores).
 
-![[04_Circuitos_Logicos_Combinacionales/img/24.png|612]]
+<img src="img/24.png" width="612" alt="Fig. 4-24: XNOR escondida al factorizar">
 
 ### Repaso 4-6
 1. Demostrar con álgebra que XNOR es el inverso de XOR: `(AB' + A'B)' = AB + A'B'`.
@@ -91,7 +92,7 @@ Recordatorio del cap. 2: se agrega un **bit de paridad** a los datos para detect
 
 - Se adapta fácilmente a **paridad impar** y a **cualquier número de bits**.
 
-![[04_Circuitos_Logicos_Combinacionales/img/25.png]]
+![Fig. 4-25: generador y comprobador de paridad](img/25.png)
 
 ## 4-8 Circuitos de habilitación/deshabilitación
 
@@ -109,36 +110,26 @@ Una compuerta puede **dejar pasar o bloquear** una señal A con una **entrada de
 - **AND y NOR** deshabilitadas → salida constante en **BAJO**.
 - **NAND y OR** deshabilitadas → salida constante en **ALTO**.
 
-![[04_Circuitos_Logicos_Combinacionales/img/26.png]]
+![Fig. 4-26: circuitos de habilitación y deshabilitación](img/26.png)
 
 ### Ejemplos de diseño
 
 - **4-21:** Diseñe un circuito lógico que permita que una señal pase a la salida sólo cuando las entradas de control B y C estén ambas en ALTO; en caso contrario, la salida deberá permanecer en BAJO.
 
-> Se usara una compuerta AND, ya que la señal debe pasarse sin invertir y la condición de salida de deshabilitación es un nivel BAJO. Como la condición de habilitación debe ocurrir sólo cuando B = C = 1 se debe usar una compuerta AND de tres entradas,
+> Se usará una compuerta AND, ya que la señal debe pasarse sin invertir y la condición de salida de deshabilitación es un nivel BAJO. Como la condición de habilitación debe ocurrir sólo cuando B = C = 1 se debe usar una compuerta AND de tres entradas.
 
-![[27a.png|284]]
-
+<img src="img/27a.png" width="284" alt="Ejemplo 4-21: AND de tres entradas como compuerta de habilitación">
 
 - **4-22:** Diseñe un circuito lógico que permita que una señal pase hacia la salida sólo cuando una (pero no ambas) de sus entradas de control esté en ALTO; en caso contrario, la salida permanecerá en ALTO.
 
 > Se utiliza una compuerta OR porque queremos que la condición de deshabilitación de la salida sea un nivel ALTO, y no queremos invertir la señal. Las entradas de control B y C se combinan en una compuerta XNOR. Cuando B y C son distintas, la compuerta XNOR envía un nivel BAJO para habilitar la compuerta OR. Cuando B y C son iguales, la compuerta XNOR envía un nivel ALTO para deshabilitar la compuerta OR.
 
-![[27b.png|291]]
-
+<img src="img/27b.png" width="291" alt="Ejemplo 4-22: OR con XNOR como compuerta de habilitación">
 
 - **4-23:** Diseñe un circuito lógico con la señal de entrada A, la entrada de control B y las salidas X y Y, que opere de la siguiente manera:
-1. Cuando B = 1, la salida X seguirá a la entrada A y la salida Y será 0.
-2. Cuando B = 0, la salida X será 0 y la salida Y seguirá a la entrada A.
+  1. Cuando B = 1, la salida X seguirá a la entrada A y la salida Y será 0.
+  2. Cuando B = 0, la salida X será 0 y la salida Y seguirá a la entrada A.
 
+<img src="img/28.png" width="472" alt="Fig. 4-28: circuito del ejemplo 4-23 con salidas X y Y">
 
-![[04_Circuitos_Logicos_Combinacionales/img/28.png|472]]
-
-
-
-
-
-
-
-
-**Siguiente seccion: [[44_CIS_Digitales_y_Diagnostico_Fallas]]**
+**Siguiente sección: [44_CIS_Digitales_y_Diagnostico_Fallas](44_CIS_Digitales_y_Diagnostico_Fallas.md)**
