@@ -1,5 +1,5 @@
 
-**Capitulo anterior: [[30_Indice_y_Resumen]]**
+**Capitulo anterior: [30_Indice_y_Resumen](30_Indice_y_Resumen.md)**
 
 # Cap. 3 – Descripción de los circuitos lógicos: índice y resumen
 
@@ -10,11 +10,11 @@
 
 | Archivo                                   | Secciones   | Contenido                                                                            |
 | ----------------------------------------- | ----------- | ------------------------------------------------------------------------------------ |
-| [[41_Sop_Simplificacion_y_Diseno]]        | 3-1 a 3-5   | Variables booleanas, **tablas de verdad**, **OR, AND, NOT**, formas de onda          |
-| [[42_Mapas_de_Karnaugh]]                  | 3-6 a 3-9   | Expresiones de circuitos, precedencia, evaluación, tabla de análisis, **NOR y NAND** |
-| [[43_XOR_XNOR_Paridad_Habilitacion]]      | 3-10 a 3-12 | **Teoremas booleanos (1–15)**, **DeMorgan (16, 17)**, **NAND/NOR universales**       |
-| [[44_CIS_Digitales_y_Diagnostico_Fallas]] | 3-13 a 3-16 | **Símbolos alternos**, activo en ALTO/BAJO, IEEE/ANSI, 6 métodos de descripción      |
-| [[45_PLD_y_HDL_VHDL]]                     | 3-17 a 3-20 | **HDL/VHDL**: ENTITY/ARCHITECTURE, señales intermedias, operadores (+ extras)        |
+| [41_Sop_Simplificacion_y_Diseno](41_Sop_Simplificacion_y_Diseno.md)        | 3-1 a 3-5   | Variables booleanas, **tablas de verdad**, **OR, AND, NOT**, formas de onda          |
+| [42_Mapas_de_Karnaugh](42_Mapas_de_Karnaugh.md)                  | 3-6 a 3-9   | Expresiones de circuitos, precedencia, evaluación, tabla de análisis, **NOR y NAND** |
+| [43_XOR_XNOR_Paridad_Habilitacion](43_XOR_XNOR_Paridad_Habilitacion.md)      | 3-10 a 3-12 | **Teoremas booleanos (1–15)**, **DeMorgan (16, 17)**, **NAND/NOR universales**       |
+| [44_CIS_Digitales_y_Diagnostico_Fallas](44_CIS_Digitales_y_Diagnostico_Fallas.md) | 3-13 a 3-16 | **Símbolos alternos**, activo en ALTO/BAJO, IEEE/ANSI, 6 métodos de descripción      |
+| [45_PLD_y_HDL_VHDL](45_PLD_y_HDL_VHDL.md)                     | 3-17 a 3-20 | **HDL/VHDL**: ENTITY/ARCHITECTURE, señales intermedias, operadores (+ extras)        |
 
 
 ## Hoja de repaso rápida
@@ -100,4 +100,4 @@ BEGIN  y <= a AND b;  END ckt;
 
 
 
-**Siguiente capitulo: [[50_Indice_y_Resumen]]**
+**Siguiente capitulo: [50_Indice_y_Resumen](50_Indice_y_Resumen.md)**
