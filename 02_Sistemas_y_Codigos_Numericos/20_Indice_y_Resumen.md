@@ -1,5 +1,4 @@
-
-**Capitulo anterior: [[10_Indice_y_Resumen]]**
+**Capítulo anterior: [10_Indice_y_Resumen](../01_Conceptos_Introdutorios/10_Indice_y_Resumen.md)**
 
 # Cap. 2 – Sistemas y códigos numéricos: índice y resumen
 
@@ -10,10 +9,10 @@
 
 | Archivo                            | Secciones | Contenido                                                                                        |
 | ---------------------------------- | --------- | ------------------------------------------------------------------------------------------------ |
-| [[21_Conversiones_y_Hexadecimal]]  | 2-1 a 2-3 | Binario↔decimal, división repetida, **hexadecimal**, Tabla 2-1, hex↔binario, conteo hex          |
-| [[22_BCD_y_gray]]                  | 2-4 a 2-6 | **Código BCD**, **código Gray**, tabla integradora (Tabla 2-3)                                   |
-| [[23_Byte_Nibble_Palabra_y_ASCII]] | 2-7, 2-8  | Byte, nibble, palabra y **código ASCII**                                                         |
-| [[24_Paridad_y_Aplicaciones]]      | 2-9, 2-10 | **Bit de paridad** (par/impar), 5 aplicaciones (CD-ROM, Intel Hex, direcciones, serie asíncrona) |
+| [21_Conversiones_y_Hexadecimal](21_Conversiones_y_Hexadecimal.md)   | 2-1 a 2-3 | Binario↔decimal, división repetida, **hexadecimal**, Tabla 2-1, hex↔binario, conteo hex          |
+| [22_BCD_y_gray](22_BCD_y_gray.md)                                   | 2-4 a 2-6 | **Código BCD**, **código Gray**, tabla integradora (Tabla 2-3)                                   |
+| [23_Byte_Nibble_Palabra_y_ASCII](23_Byte_Nibble_Palabra_y_ASCII.md) | 2-7, 2-8  | Byte, nibble, palabra y **código ASCII**                                                         |
+| [24_Paridad_y_Aplicaciones](24_Paridad_y_Aplicaciones.md)           | 2-9, 2-10 | **Bit de paridad** (par/impar), 5 aplicaciones (CD-ROM, Intel Hex, direcciones, serie asíncrona) |
 
 ## Hoja de repaso rápida
 
@@ -97,5 +96,4 @@ Ej.: `#` = 23₁₆ = 0100011 (tres 1s) → paridad par = 1.
 8. **Alfanuméricos:** grupos de bits para todos los caracteres del teclado; **ASCII** es el más usado.
 9. **Paridad:** se adjunta un bit especial a cada grupo transmitido.
 
-
-**Siguiente capitulo: [[30_Indice_y_Resumen]]**
+**Siguiente capítulo: [30_Indice_y_Resumen](../03_Algebra_Booleana/30_Indice_y_Resumen.md)**
