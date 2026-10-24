@@ -13,7 +13,7 @@ Los más comunes: **decimal, binario, octal y hexadecimal** (octal y hex se ven 
 - Ejemplo (Fig. 1-3): 2745.214 = 2·(10³) + 7·(10²) + 4·(10¹) + 5·(10⁰) + 2·(10⁻¹) + 1·(10⁻²) + 4·(10⁻³)
 - Con **N dígitos** se cuentan **10^N** números distintos (0 a 10^N − 1).
 
-![Fig. 1-10: transmisión en paralelo vs. serie](01_Conceptos_Introdutorios/img/3.png)
+![Fig. 1-10: transmisión en paralelo vs. serie](img/3.png)
 
 ### Sistema binario (base 2)
 - Símbolos: **0 y 1**. También es posicional (potencias de 2).
