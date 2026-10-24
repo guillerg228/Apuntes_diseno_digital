@@ -7,9 +7,9 @@
 
 | Archivo                                           | Secciones | Contenido                                                                                                                    |
 | ------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| [[11_Analogico_y_Digital]]                        | 1-1, 1-2  | Representación analógica vs. digital, ventajas y limitaciones de lo digital, los 4 pasos con sensores/ADC/DAC                |
-| [[12_Sistemas_Numericos]]                         | 1-3       | Decimal y binario, valor posicional, conversión binario→decimal, conteo binario, fórmulas con N bits                         |
-| [[13_Senales_Transmision_Memoria_y_Computadoras]] | 1-4 a 1-8 | Niveles de voltaje y diagramas de tiempos, circuitos lógicos, transmisión serie/paralelo, memoria, partes de una computadora |
+| [11_Analogico_y_Digital](11_Analogico_y_Digital.md)                                           | 1-1, 1-2  | Representación analógica vs. digital, ventajas y limitaciones de lo digital, los 4 pasos con sensores/ADC/DAC                |
+| [12_Sistemas_Numericos](12_Sistemas_Numericos.md)                                             | 1-3       | Decimal y binario, valor posicional, conversión binario→decimal, conteo binario, fórmulas con N bits                         |
+| [13_Senales_Transmision_Memoria_y_Computadoras](13_Senales_Transmision_Memoria_y_Computadoras.md) | 1-4 a 1-8 | Niveles de voltaje y diagramas de tiempos, circuitos lógicos, transmisión serie/paralelo, memoria, partes de una computadora |
 
 > Estos tres archivos están ahora dentro de `01_Conceptos_Introdutorios/` junto con este índice.
 
@@ -77,5 +77,4 @@ Un circuito **con memoria** conserva su salida aunque desaparezca la entrada que
 8. **Microprocesador** = CPU en un chip.
 9. **Microcontrolador** = microcomputadora para control dedicado.
 
-
-**Siguiente capitulo: [[20_Indice_y_Resumen]]**
+**Siguiente capítulo: [20_Indice_y_Resumen](../02_Sistemas_y_Codigos_Numericos/20_Indice_y_Resumen.md)**
