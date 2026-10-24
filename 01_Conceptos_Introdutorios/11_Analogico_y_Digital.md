@@ -1,5 +1,5 @@
+**Índice: [10_Indice_y_Resumen](10_Indice_y_Resumen.md)**
 
-**Indice: [[10_Indice_y_Resumen]]**
 # Analógico vs. Digital
 
 ## 1-1 Representaciones numéricas
@@ -41,14 +41,11 @@
 
 ### Fig. 1-1: control de temperatura (flujo)
 
-![Fig. 1-10: transmisión en paralelo vs. serie](img/1.png)
+![Fig. 1-1: control de temperatura (flujo)](img/1.png)
 
 ### Ejemplo: grabación de audio (CD)
 Micrófono (señal analógica) → **ADC** → información digital en el CD → reproductor lee → **DAC** → amplificador → bocina.
 
-
-
 **Convertidores ADC y DAC** enlace
 
-
-**Siguiente seccion: [[12_Sistemas_Numericos]]**
+**Siguiente sección: [12_Sistemas_Numericos](12_Sistemas_Numericos.md)**
