@@ -1,8 +1,8 @@
+**Índice: [40_Indice_y_Resumen](40_Indice_y_Resumen.md)**
 
-**Indice: [[40_Indice_y_Resumen]]**
 # SOP, simplificación algebraica y diseño
 
- **Circuito combinacional:** en todo momento la salida depende **solo de la combinación actual de las entradas**. **No tiene memoria.**
+**Circuito combinacional:** en todo momento la salida depende **solo de la combinación actual de las entradas**. **No tiene memoria.**
 
 ## 4-1 Forma de suma de productos (SOP) y producto de sumas (POS)
 
@@ -33,7 +33,7 @@ Dos métodos: **álgebra booleana** (depende de experiencia, prueba y error) y *
 - DeMorgan: `(A'C')' = A + C` → `z = ABC + AB'(A + C)`
 - Multiplicar: `= ABC + AB'A + AB'C = ABC + AB' + AB'C`
 - Factorizar `AC` del 1.º y 3.º: `= AC(B + B') + AB' = AC + AB'`
-- **`z = A(B' + C)`** 
+- **`z = A(B' + C)`**
 
 ### Ejemplo 4-2 (dos métodos)
 `z = AB'C' + AB'C + ABC`
@@ -41,17 +41,17 @@ Dos métodos: **álgebra booleana** (depende de experiencia, prueba y error) y *
 - **Método 1:** factorizar `AB'` de los dos primeros: `AB'(C' + C) + ABC = AB' + ABC = A(B' + BC)` → por el teorema 15b → **`z = A(B' + C)`**.
 - **Método 2 (truco):** **usar un término dos veces** (`AB'C + AB'C = AB'C`, teorema 7):
   `z = AB'C' + AB'C + AB'C + ABC = AB'(C' + C) + AC(B' + B) = AB' + AC = A(B' + C)`.
--  **Truco general:** puedes **repetir un término** las veces que necesites para factorizarlo con distintos vecinos.
+- **Truco general:** puedes **repetir un término** las veces que necesites para factorizarlo con distintos vecinos.
 
 ### Otras observaciones
 - **Busca el factor común más grande** entre términos; llegas al resultado en menos pasos.
-- Se puede llegar a una expresiones que "parecen irreducibles" y que **no** sean la expresion mínima. No hay manera obvia de saber si te faltó un paso → **el mapa K sí garantiza la forma mínima**.
+- Se puede llegar a expresiones que "parecen irreducibles" y que **no** sean la expresión mínima. No hay manera obvia de saber si te faltó un paso → **el mapa K sí garantiza la forma mínima**.
 
 ### Ejemplo
 `z = (A + B)(A' + B')` → multiplicar: `AA' + AB' + BA' + BB'` → **`z = A'B + AB'`** (es una **XOR**). Mismas compuertas y conexiones que el original: la simplificación solo lo dejó equivalente y algo más claro.
 
 ### Ejemplo
-`x = ABC + AB'D + C'D'` : **no se puede simplificar más.**
+`x = ABC + AB'D + C'D'`: **no se puede simplificar más.**
 
 ## 4-4 Diseño de circuitos combinacionales
 
@@ -59,7 +59,7 @@ Dos métodos: **álgebra booleana** (depende de experiencia, prueba y error) y *
 - Si la variable vale **0** en esa fila, **entra negada** al AND; si vale 1, entra directa.
 - Ejemplo: salida 1 solo con A=0, B=1 → `x = A'B`. Salida 1 con (0,1) y (1,0) → `x = A'B + AB'`.
 
-![[04_Circuitos_Logicos_Combinacionales/img/5.png|506]]
+<img src="img/5.png" width="506" alt="Fig. 4-5: cuatro AND, cada una activa para una combinación (A,B)">
 
 *Cuatro AND, cada una activa para una sola combinación (A,B).*
 
@@ -76,53 +76,46 @@ Tabla: x = 1 en 011, 101, 110, 111.
 Se usa el término `ABC` **tres veces** para factorizar con cada otro término:
 `x = BC(A' + A) + AC(B' + B) + AB(C' + C)` → **`x = BC + AC + AB`** (tres AND y un OR).
 
-![[04_Circuitos_Logicos_Combinacionales/img/7.png|457]]
+<img src="img/7.png" width="457" alt="Fig. 4-7: circuito de mayoría">
 
 ### Ejemplo: ADC de 4 bits y batería de 12 V
 
-Un convertidor analógico-digital está monitoreando el voltaje de corriente directa de una batería de almacenamiento de 12 V. La salida del convertidor es un número binario de 4 bits identificado como ABCD, que corresponde al voltaje de la batería en intervalos de 1 V, en donde A es el MSB. Las salidas binarias del convertidor se alimentan a un circuito lógico que debe producir una salida en ALTO siempre y cuando el valor binario sea mayor que 0110$_{2}$  = 6$_{10}$ ; esto es, que el voltaje de la batería sea mayor que 6 V. Diseñe este circuito lógico.
+Un convertidor analógico-digital está monitoreando el voltaje de corriente directa de una batería de almacenamiento de 12 V. La salida del convertidor es un número binario de 4 bits identificado como ABCD, que corresponde al voltaje de la batería en intervalos de 1 V, en donde A es el MSB. Las salidas binarias del convertidor se alimentan a un circuito lógico que debe producir una salida en ALTO siempre y cuando el valor binario sea mayor que 0110₂ = 6₁₀; esto es, que el voltaje de la batería sea mayor que 6 V. Diseñe este circuito lógico.
 
 - Tabla: z = 1 para los valores 7 a 15 (nueve combinaciones).
 - Simplificación algebraica:
 
+```
+z = A'BCD + AB'C'D' + AB'C'D + AB'CD' + AB'CD + ABC'D' + ABC'D + ABCD' + ABCD
+z = A'BCD + AB'C'(D' + D) + AB'C(D' + D) + ABC'(D' + D) + ABC(D' + D)
+  = A'BCD + AB'C' + AB'C + ABC' + ABC
+  = A'BCD + AB'(C' + C) + AB(C' + C)
+  = A'BCD + AB' + AB
+  = A'BCD + A(B' + B)
+  = A'BCD + A
+  = BCD + A
+```
 
-**`z = A'BCD + AB'C'D' + AB'C'D + AB'CD' + AB'CD + ABC'D' + ABC'D + ABCD' + ABCD`**
-**`z = A'BCD + AB'C'(D' + D) + AB'C(D' + D) + ABC'(D' + D) + ABC(D' + D)`**
-**`  = A'BCD + AB'C' + AB'C + ABC' + ABC`**
-**`  = A'BCD + AB'(C' + C) + AB(C' + C)`**
-**`  = A'BCD + AB' + AB`**
-**`  = A'BCD + A(B' + B)`**
-**`  = A'BCD + A`**
-**`  = BCD + A `**
-
-
-![[8.png]]
-
+![Fig. 4-8: circuito del detector de batería](img/8.png)
 
 ### Ejemplo: copiadora (paro por falta de papel o atasco)
 
 En una copiadora simple, se debe generar una señal de paro S para detener la operación de la máquina y encender una luz indicadora cada vez que exista una de las siguientes condiciones: (1) que no haya papel en la bandeja alimentadora; o (2) que se activen los dos microinterruptores en la ruta del papel, lo cual indica un atasco. La presencia de papel en la bandeja alimentadora se indica mediante un nivel ALTO en la señal lógica P. Cada microinterruptor produce una señal lógica (Q y R, respectivamente) que cambia a ALTO cada vez que el papel pasa por el interruptor y lo activa. Diseñe el circuito lógico para producir un nivel ALTO en la señal de salida S para las condiciones antes mencionadas.
 
-Tabla de verdad: 
+Tabla de verdad:
 
-![[tv.png|241]]
+<img src="img/tv.png" width="241" alt="Tabla de verdad de la copiadora">
 
+```
+S = P'Q'R' + P'Q'R + P'QR' + P'QR + PQR
+S = P'Q'(R' + R) + P'Q(R' + R) + PQR
+S = P'Q' + P'Q + PQR
+S = P' + PQR
+S = P' + QR
+```
 
-**`S = P'Q'R' + P'Q'R + P'QR' + P'QR + PQR`**
-**`S = P'Q'(R' + R) + P'Q(R' + R) + PQR `**
-**`S = P'Q' + P'Q + PQR `**
-**`S = P' + PQR`**
-**`S = P' + QR`**
+![Fig. 4-9: circuito de la copiadora](img/9.png)
 
+**Para esta sección se usó:** [33_Teoremas_Demorgan_y_Universalidad](../03_Descripcion_de_Circuitos_Logicos/33_Teoremas_Demorgan_y_Universalidad.md)
 
-![[04_Circuitos_Logicos_Combinacionales/img/9.png]]
-
-
-**Para esta seccion se uso:**
-	[[33_Teoremas_Demorgan_y_Universalidad]]
-
-
-
-
-
-**Siguiente seccion: [[42_Mapas_de_Karnaugh]]**
+**Siguiente sección: [42_Mapas_de_Karnaugh](42_Mapas_de_Karnaugh.md)**
