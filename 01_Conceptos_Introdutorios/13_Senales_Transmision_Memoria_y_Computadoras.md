@@ -53,12 +53,13 @@ Gráfica de **voltaje vs. tiempo** que muestra cómo cambia una señal digital (
 - Sirve para almacenar números binarios temporal o permanentemente, con posibilidad de modificarlos.
 - Tipos: magnética, óptica y circuitos electrónicos de fijación (**latches** y **flip-flops**).
 
-![Fig. 1-10: transmisión en paralelo vs. serie|508](01_Conceptos_Introdutorios/img/11.png)
+![Fig. 1-10: transmisión en paralelo vs. serie|508](img/11.png)
 
 
 **Principales dispositivos digitales con memoria en: 
 	[[51_Latches_NAND_NOR_Pulsos]]
 	[[52_Flip_Flops_SR_JK_D_Asincronas]]
+	
 ## 1-8 Computadoras digitales
 Una computadora es un sistema de hardware que **realiza operaciones aritméticas, manipula datos (binarios) y toma decisiones**. Ejecuta un paso a la vez, pero en nanosegundos (ej. sumar 10 números = 9 sumas de 2 en 2). Necesita un **programa** (instrucciones codificadas en binario guardadas en memoria) que le diga exactamente qué hacer.
 
