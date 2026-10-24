@@ -1,9 +1,10 @@
+**Índice: [10_Indice_y_Resumen](10_Indice_y_Resumen.md)**
 
-**Indice: [[10_Indice_y_Resumen]]**
-**Seccion anterior: [[11_Analogico_y_Digital]]**
+**Sección anterior: [11_Analogico_y_Digital](11_Analogico_y_Digital.md)**
+
 # Sistemas numéricos y binario
 
-## 1-3 Sistemas numéricos digitales  
+## 1-3 Sistemas numéricos digitales
 
 Los más comunes: **decimal, binario, octal y hexadecimal** (octal y hex se ven en el cap. 2).
 
@@ -13,7 +14,7 @@ Los más comunes: **decimal, binario, octal y hexadecimal** (octal y hex se ven 
 - Ejemplo (Fig. 1-3): 2745.214 = 2·(10³) + 7·(10²) + 4·(10¹) + 5·(10⁰) + 2·(10⁻¹) + 1·(10⁻²) + 4·(10⁻³)
 - Con **N dígitos** se cuentan **10^N** números distintos (0 a 10^N − 1).
 
-![Fig. 1-10: transmisión en paralelo vs. serie](img/3.png)
+![Fig. 1-3: valor posicional en el sistema decimal](img/3.png)
 
 ### Sistema binario (base 2)
 - Símbolos: **0 y 1**. También es posicional (potencias de 2).
@@ -62,17 +63,13 @@ Tabla de pesos útil:
 ### Fórmulas clave
 - Con **N bits** se pueden hacer **2^N conteos** (de 0 a 2^N − 1).
 - **Máximo valor con N bits = 2^N − 1** (todos los bits en 1).
-  - 4 bits → 15 
-  - 8 bits → 255 (11111111₂) 
-  - 10 bits → 1023 
-  - 12 bits → 4095 
+  - 4 bits → 15
+  - 8 bits → 255 (11111111₂)
+  - 10 bits → 1023
+  - 12 bits → 4095
   - 14 bits → 16383
 - **Bits necesarios para contar hasta X:** el menor N tal que 2^N − 1 ≥ X (ej. hasta 511 → 9 bits; hasta 63 → 6 bits).
 
-**Para mas informacion de este tema: [[21_Conversiones_y_Hexadecimal]]**
+**Para más información de este tema: [21_Conversiones_y_Hexadecimal](../02_Sistemas_y_Codigos_Numericos/21_Conversiones_y_Hexadecimal.md)**
 
-
-
-
-**Siguiente seccion: [[13_Senales_Transmision_Memoria_y_Computadoras]]**
-
+**Siguiente sección: [13_Senales_Transmision_Memoria_y_Computadoras](13_Senales_Transmision_Memoria_y_Computadoras.md)**
