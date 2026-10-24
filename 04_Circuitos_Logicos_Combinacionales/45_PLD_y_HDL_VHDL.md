@@ -1,6 +1,7 @@
+**Índice: [40_Indice_y_Resumen](40_Indice_y_Resumen.md)**
 
-**Indice: [[40_Indice_y_Resumen]]**
-**Seccion anterior: [[44_CIS_Digitales_y_Diagnostico_Fallas]]**
+**Sección anterior: [44_CIS_Digitales_y_Diagnostico_Fallas](44_CIS_Digitales_y_Diagnostico_Fallas.md)**
+
 # PLDs y HDL (VHDL)
 
 ## 4-14 Dispositivos lógicos programables (PLDs)
@@ -15,7 +16,7 @@
 - Al decidir qué cruces se conectan se "programa" cómo las entradas llegan a las salidas.
 - Ejemplo (Fig. 4-42): un arreglo programable que **selecciona las entradas de cada compuerta AND**, para producir cualquier **producto** de las variables. Otro arreglo similar puede conectar las salidas de las AND a **compuertas OR** (→ suma de productos). La arquitectura se estudia en el cap. 13.
 
-![[04_Circuitos_Logicos_Combinacionales/img/42.png|513]]
+<img src="img/42.png" width="513" alt="Fig. 4-42: arreglo programable de compuertas AND">
 
 ### Cómo se programa un PLD
 | Método | Descripción |
@@ -26,22 +27,22 @@
 - **JEDEC:** organismo que estandarizó terminales y el formato de archivo de programación (**archivo JEDEC**, independiente del fabricante). Cualquier programador compatible puede cargarlo.
 - **JTAG:** estándar para **probar CIs** sin conectar equipo a todas sus terminales; también permite programarlos. Lo incluyen PLDs y microcontroladores.
 
-![[04_Circuitos_Logicos_Combinacionales/img/43.png|468]]
+<img src="img/43.png" width="468" alt="Fig. 4-43: programación de un PLD">
 
 ### Software de desarrollo (Altera, en el libro)
 - Convierte cualquier descripción (esquemático, tabla de verdad, ecuaciones, **HDL**) en la **matriz de 1s y 0s** para el PLD.
 - Admite entrada por **diagramas esquemáticos (.gdf)**, AHDL, **VHDL**, Verilog y **diagramas de tiempos**.
 - Los bloques hechos con métodos distintos se pueden **interconectar** (Fig. 4-44).
 
-![[04_Circuitos_Logicos_Combinacionales/img/44.png|535]]
+<img src="img/44.png" width="535" alt="Fig. 4-44: bloques de distintos métodos de entrada interconectados">
 
 ### Diseño jerárquico y flujo de desarrollo
 - **Diseño jerárquico:** circuitos pequeños y útiles se describen del modo más conveniente y se **combinan** para formar un sistema (ejemplo: reproductor de CDs con sus secciones de audio, rastreo láser, eje, controles de usuario…).
 - Método **arriba-abajo (top-down):** se parte del **sistema completo**, se divide en subsecciones y luego en circuitos individuales, cada uno con **entradas, salidas y comportamiento definidos**. Luego se **construye de abajo hacia arriba** y se prueba cada nivel por separado.
 
-![[04_Circuitos_Logicos_Combinacionales/img/45.png]]
+![Fig. 4-45: diseño jerárquico](img/45.png)
 
-![[04_Circuitos_Logicos_Combinacionales/img/46.png]]
+![Fig. 4-46: diseño jerárquico (continuación)](img/46.png)
 
 **Ciclo de desarrollo de cada bloque:**
 1. **Crear el archivo de diseño** (HDL, esquemático…).
@@ -51,9 +52,9 @@
 5. **Prueba en circuito** y **diagnóstico de fallas** si algo falla.
 - Después se prueban las subsecciones y, al final, el sistema completo. Se presta a **trabajo en equipo**.
 
-![[04_Circuitos_Logicos_Combinacionales/img/47.png]]
+![Fig. 4-47: ciclo de desarrollo](img/47.png)
 
-![[04_Circuitos_Logicos_Combinacionales/img/48.png|405]]
+<img src="img/48.png" width="405" alt="Fig. 4-48: simulación con vectores de prueba">
 
 ## 4-15 Representación de datos en HDL
 
@@ -120,10 +121,12 @@ Tipos del estándar **IEEE** (bibliotecas de funciones comunes). **`STD_LOGIC` �
 
 > Las **bibliotecas** son colecciones de código reutilizable (**macrofunciones**, p. ej. dispositivos TTL estándar); para usarlas, **los tipos de tus señales deben coincidir** con los de las funciones.
 
-> Para usar `STD_LOGIC` hay que declarar la biblioteca al inicio del archivo:
-> ```  LIBRARY ieee;
->      USE ieee.std_logic_1164.ALL;
-> ```
+Para usar `STD_LOGIC` hay que declarar la biblioteca al inicio del archivo:
+
+```vhdl
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+```
 
 ## 4-16 Tablas de verdad con HDL
 
@@ -218,7 +221,7 @@ END decision;
 - Un **entero** sí se puede comparar con `<`, `>`; un `BIT_VECTOR` **no**.
 - Diagrama de flujo: **IF/THEN** (hacer o no hacer) e **IF/THEN/ELSE** (elegir entre dos acciones).
 
-![[04_Circuitos_Logicos_Combinacionales/img/52.png|576]]
+<img src="img/52.png" width="576" alt="Fig. 4-52: diagramas de flujo de IF/THEN e IF/THEN/ELSE">
 
 ### ELSIF: varias decisiones
 Selecciona **una de muchas** acciones: se evalúan las condiciones **en orden** y se ejecuta **solo la de la primera verdadera**. Sirve con **desigualdades** y rangos.
@@ -258,9 +261,10 @@ END quetancaliente;
 - Se usa una **señal intermedia** `estado` (un patrón de 3 bits, uno por indicador) y al final **cada bit se conecta a su salida** (instrucciones concurrentes, fuera del `PROCESS`).
 - La palabra clave es **`ELSIF`** (no `ELSE IF`).
 
-![[04_Circuitos_Logicos_Combinacionales/img/56.png|445]]
+<img src="img/56.png" width="445" alt="Fig. 4-56: diagrama de flujo de IF/ELSIF">
 
-![[57.png|504]]
+<img src="img/57.png" width="504" alt="Fig. 4-57: indicador de rango de temperatura">
+
 ### CASE
 Evalúa **un objeto** y busca **el caso** (valor) que coincide; cada caso tiene sus acciones.
 
@@ -328,7 +332,7 @@ END detector;
 - `INTEGER RANGE 0 TO 25` hace que el compilador use **5 bits** para la salida.
 - El resto de combinaciones (ninguna moneda, o varias que no pueden ocurrir) → 0.
 
-![[62.png|573]]
+<img src="img/62.png" width="573" alt="Fig. 4-62: detector de monedas">
 
 ### Errores típicos
 - `CASE` y `IF` **solo dentro de `PROCESS`** (en VHDL-93 estándar), y el `PROCESS` necesita su `BEGIN`.
@@ -348,6 +352,4 @@ END detector;
 ## Términos importantes
 asignación de señal seleccionada · cero esfuerzo de inserción (ZIF) · comprobación de paridad · condición "no importa" · diseño jerárquico · encapsulado dual en línea (DIP) · estructuras de control · habilitar/deshabilitar · lista de sensibilidad · TTL · CMOS · XNOR · XOR · producto de sumas · SSI/MSI/LSI/VLSI/ULSI/GSI · suma de productos · vectores de prueba · mapa de Karnaugh · concatenación · `PROCESS` · `CASE` · `ELSIF`
 
-
-
-**Siguiete capitulo: [[50_Indice_y_Resumen]]**
+**Siguiente capítulo: [50_Indice_y_Resumen](../05_Latches_y_Flip_Flops/50_Indice_y_Resumen.md)**
