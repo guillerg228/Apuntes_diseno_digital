@@ -1,6 +1,7 @@
+**Índice: [10_Indice_y_Resumen](10_Indice_y_Resumen.md)**
 
-**Indice: [[10_Indice_y_Resumen]]**
-**Seccion anterior: [[12_Sistemas_Numericos]]**
+**Sección anterior: [12_Sistemas_Numericos](12_Sistemas_Numericos.md)**
+
 # Señales, transmisión, memoria y computadoras
 
 ## 1-4 Representación de cantidades binarias
@@ -22,7 +23,8 @@ Gráfica de **voltaje vs. tiempo** que muestra cómo cambia una señal digital (
 - Las transiciones se dibujan verticales aunque no son instantáneas.
 - Se usan para ver la relación entre varias señales y para **pruebas y detección de fallas** (con osciloscopio o analizador lógico).
 
-![Fig. 1-10: transmisión en paralelo vs. serie](img/8.png)
+![Diagrama de tiempos de una señal digital](img/8.png)
+
 ## 1-5 Circuitos digitales / lógicos
 - Producen salidas dentro de los intervalos de 0 y 1 y responden igual a **cualquier entrada dentro del mismo intervalo** (Dos entradas con voltajes distintos pero mismo nivel binario → misma salida).
 - **Lógica del circuito** = relación entrada/salida; por eso también se les llama **circuitos lógicos**.
@@ -37,7 +39,7 @@ Gráfica de **voltaje vs. tiempo** que muestra cómo cambia una señal digital (
 
 - b) **Serie** (ej. puerto COM, USB): **un bit a la vez** por una sola línea, empezando por el LSB.
 
-![Fig. 1-10: transmisión en paralelo vs. serie|558](img/10.png)
+![Fig. 1-10: transmisión en paralelo vs. serie](img/10.png)
 
 | | Paralelo | Serie |
 |---|---|---|
@@ -53,13 +55,13 @@ Gráfica de **voltaje vs. tiempo** que muestra cómo cambia una señal digital (
 - Sirve para almacenar números binarios temporal o permanentemente, con posibilidad de modificarlos.
 - Tipos: magnética, óptica y circuitos electrónicos de fijación (**latches** y **flip-flops**).
 
-![Fig. 1-10: transmisión en paralelo vs. serie|508](img/11.png)
+![Circuito sin memoria vs. con memoria](img/11.png)
 
+**Principales dispositivos digitales con memoria en:**
 
-**Principales dispositivos digitales con memoria en: 
-	[[51_Latches_NAND_NOR_Pulsos]]
-	[[52_Flip_Flops_SR_JK_D_Asincronas]]
-	
+- [51_Latches_NAND_NOR_Pulsos](../05_Latches_y_Flip_Flops/51_Latches_NAND_NOR_Pulsos.md)
+- [52_Flip_Flops_SR_JK_D_Asincronas](../05_Latches_y_Flip_Flops/52_Flip_Flops_SR_JK_D_Asincronas.md)
+
 ## 1-8 Computadoras digitales
 Una computadora es un sistema de hardware que **realiza operaciones aritméticas, manipula datos (binarios) y toma decisiones**. Ejecuta un paso a la vez, pero en nanosegundos (ej. sumar 10 números = 9 sumas de 2 en 2). Necesita un **programa** (instrucciones codificadas en binario guardadas en memoria) que le diga exactamente qué hacer.
 
@@ -73,7 +75,7 @@ Una computadora es un sistema de hardware que **realiza operaciones aritméticas
 | **Aritmética-lógica (ALU)** | Realiza cálculos y decisiones lógicas; guarda resultados en memoria |
 | **Salida** | Presenta resultados (impresora, pantalla, proceso) |
 
-![Fig. 1-10: transmisión en paralelo vs. serie](img/12.png)
+![Diagrama de las 5 unidades funcionales de una computadora](img/12.png)
 
 **CPU = Unidad de control + Unidad aritmética-lógica.**
 
@@ -87,4 +89,4 @@ Una computadora es un sistema de hardware que **realiza operaciones aritméticas
 ## Palabras clave
 bit · circuitos digitales/lógicos · ADC · DAC · diagrama de tiempos · memoria · microcomputadora · microcontrolador · microprocesador · programa · sistema analógico/digital · sistema binario/decimal · transmisión en paralelo/serie · CPU · unidad aritmética-lógica · unidad de control/entrada/memoria/salida
 
-**Siguiente capitulo: [[20_Indice_y_Resumen]]**
+**Siguiente capítulo: [20_Indice_y_Resumen](../02_Sistemas_y_Codigos_Numericos/20_Indice_y_Resumen.md)**
