@@ -1,6 +1,7 @@
+**Índice: [30_Indice_y_Resumen](30_Indice_y_Resumen.md)**
 
-**Indice: [[30_Indice_y_Resumen]]**
-**Seccion anterior: [[31_Algebra_booleana_Tablas_OR_AND_NOT]]**
+**Sección anterior: [31_Algebra_booleana_Tablas_OR_AND_NOT](31_Algebra_booleana_Tablas_OR_AND_NOT.md)**
+
 # Expresiones, evaluación, implementación, NOR y NAND
 
 ## 3-6 Describir circuitos en forma algebraica
@@ -10,7 +11,8 @@ Cualquier circuito se describe con OR, AND y NOT. Se escribe la expresión **com
 - (a): AND(A,B) → OR con C ⇒ **x = AB + C**
 - (b): OR(A,B) → AND con C ⇒ **x = (A + B)·C** (los paréntesis son necesarios)
 
-![[03_Descripcion_de_Circuitos_Logicos/img/13.png|404]]
+<img src="img/13.png" width="404" alt="Fig. 3-13: circuitos (a) x = AB + C y (b) x = (A + B)C">
+
 ### Precedencia de operadores
 1. **Paréntesis** primero.
 2. **AND antes que OR** (igual que × antes que + en álgebra normal).
@@ -23,7 +25,7 @@ La salida de un inversor es la expresión de entrada con barra encima.
 
 > ⚠️ **`(A + B)'` ≠ `A' + B'`** y **`(AB)'` ≠ `A'B'`**. La barra larga invierte toda la expresión; las barras cortas invierten cada variable por separado.
 
-![[03_Descripcion_de_Circuitos_Logicos/img/15.png]]
+![Fig. 3-15: circuitos con inversores](img/15.png)
 
 **Fig. 3-15 :**
 - (a) `x = A'BC(A + D)'`
@@ -64,7 +66,7 @@ Prueba cada combinación; si alguna da salida incorrecta, compara cada nodo inte
 - Nodo **correcto** → el problema está **a la derecha** de ese nodo.
 - Nodo **incorrecto** → el problema está **a la izquierda** (o el nodo está en corto con algo).
 
-![[03_Descripcion_de_Circuitos_Logicos/img/16.png|548]]
+<img src="img/16.png" width="548" alt="Fig. 3-16: análisis con nodos intermedios">
 
 **Ejemplo 3-6:** tabla para `x = A'BC(A + D)'` con t = A'BC y v = (A+D)'. Resultado: **x = 1 solo cuando ABCD = 0110**.
 
@@ -76,9 +78,9 @@ Se dibuja el circuito directamente desde la expresión:
 - Una suma de productos (ej. `y = AC + BC' + A'BC` ) → **un AND por cada término** (con inversores donde haya barras) y todos entran a un **OR**.
 - Producto de sumas (ej. `x = (A + B)(B' + C)` ) → una OR por cada paréntesis y una AND al final.
 
-![[03_Descripcion_de_Circuitos_Logicos/img/17.png|589]]
+<img src="img/17.png" width="589" alt="Fig. 3-17: implementación de una suma de productos">
 
-![[03_Descripcion_de_Circuitos_Logicos/img/18.png|535]]
+<img src="img/18.png" width="535" alt="Fig. 3-18: implementación de un producto de sumas">
 
 ## 3-9 Compuertas NOR y NAND
 
@@ -92,7 +94,9 @@ Se dibuja el circuito directamente desde la expresión:
 | 0 | 1 | 1 | **0** |
 | 1 | 0 | 1 | **0** |
 | 1 | 1 | 1 | **0** |
-![[03_Descripcion_de_Circuitos_Logicos/img/19.png|358]]
+
+<img src="img/19.png" width="358" alt="Fig. 3-19: compuerta NOR">
+
 ### NAND = AND + inversor
 - **x = (AB)'** — símbolo AND con **burbuja** en la salida.
 - Salida en **BAJO solo cuando todas las entradas están en ALTO**; en ALTO en cualquier otro caso.
@@ -103,7 +107,8 @@ Se dibuja el circuito directamente desde la expresión:
 | 0 | 1 | 0 | **1** |
 | 1 | 0 | 0 | **1** |
 | 1 | 1 | 1 | **0** |
-![[03_Descripcion_de_Circuitos_Logicos/img/22.png|382]]
+
+<img src="img/22.png" width="382" alt="Fig. 3-22: compuerta NAND">
 
 ### Tabla resumen de las 6 compuertas (2 entradas)
 
@@ -113,10 +118,7 @@ Se dibuja el circuito directamente desde la expresión:
 | 0 | 1 | 1 | 0 | 0 | 1 |
 | 1 | 0 | 1 | 0 | 0 | 1 |
 | 1 | 1 | 1 | 1 | 0 | 0 |
+
 (NOT: A' invierte la entrada.)
 
-
-
-
-
-**Siguiente seccion: [[33_Teoremas_Demorgan_y_Universalidad]]**
+**Siguiente sección: [33_Teoremas_Demorgan_y_Universalidad](33_Teoremas_Demorgan_y_Universalidad.md)**
