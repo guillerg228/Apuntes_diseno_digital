@@ -1,5 +1,5 @@
+**Índice: [20_Indice_y_Resumen](20_Indice_y_Resumen.md)**
 
-**Indice: [[20_Indice_y_Resumen]]**
 # Conversiones y hexadecimal
 
 ## 2-1 Binario → decimal
@@ -32,14 +32,14 @@ Dividir entre 2 y anotar el **residuo** hasta que el cociente sea 0. **Primer re
 25₁₀ = 11001₂
 ```
 
-![Fig. 2-1: diagrama de flujo de la división repetida|368](img/1.png)
+![Fig. 2-1: diagrama de flujo de la división repetida](img/1.png)
 
 *Algoritmo de división repetida. Sirve para convertir a **cualquier base** (2, 16, etc.).*
 
 ### Alcance de conteo
 Con **N bits** se representan los decimales de **0 a 2^N − 1** (2^N valores distintos).
 - 8 bits → 0 a 255.
-- ¿Bits para llegar a 12,500? 13 bits → 8191 (no alcanza); **14 bits** → 16,383 
+- ¿Bits para llegar a 12,500? 13 bits → 8191 (no alcanza); **14 bits** → 16,383.
 
 ## 2-3 Sistema hexadecimal (base 16)
 
@@ -47,7 +47,7 @@ Con **N bits** se representan los decimales de **0 a 2^N − 1** (2^N valores di
 - Pesos: potencias de 16 (16⁰ = 1, 16¹ = 16, 16² = 256, 16³ = 4096…).
 - **Cada dígito hex = 4 bits** (un nibble).
 
-### Tabla 2-1: Hex – Decimal – Binario 
+### Tabla 2-1: Hex – Decimal – Binario
 
 | Hex | Dec | Bin | | Hex | Dec | Bin |
 |---|---|---|---|---|---|---|
@@ -121,5 +121,4 @@ Es una **notación abreviada para humanos** de cadenas binarias largas (hasta 64
 | Binario → Hex | Grupos de 4 bits → 1 dígito hex |
 | Hex → Binario | Cada dígito → 4 bits |
 
-**Siguiente seccion: [[22_BCD_y_gray]]**
-
+**Siguiente sección: [22_BCD_y_gray](22_BCD_y_gray.md)**
