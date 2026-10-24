@@ -1,6 +1,7 @@
+**Índice: [30_Indice_y_Resumen](30_Indice_y_Resumen.md)**
 
-**Indice: [[30_Indice_y_Resumen]]**
-**Seccion anterior: [[33_Teoremas_Demorgan_y_Universalidad]]**
+**Sección anterior: [33_Teoremas_Demorgan_y_Universalidad](33_Teoremas_Demorgan_y_Universalidad.md)**
+
 # Símbolos alternos, activo en ALTO/BAJO, IEEE/ANSI
 
 ## 3-13 Representaciones alternas de compuertas
@@ -10,7 +11,7 @@ Cada compuerta tiene un **símbolo estándar** y un **símbolo alternativo** (**
 1. **Invertir todas las entradas y la salida** (agregar burbujas donde no hay, quitarlas donde sí hay).
 2. **Cambiar la operación**: AND ↔ OR (el inversor no cambia de operación).
 
-![[33.png]]
+![Fig. 3-33: símbolos estándar y alternativos de las compuertas](img/33.png)
 
 | Compuerta | Símbolo estándar | Símbolo alternativo | Equivalencia (DeMorgan) |
 |---|---|---|---|
@@ -62,13 +63,11 @@ Así se puede **seguir la señal** y entender el circuito sin calcular tablas.
 - Ambas dan la misma tabla de verdad (Z = 1 si AB = 1 o CD = 1).
 - **¿Cuál usar?** Depende de si la acción posterior ocurre cuando Z = 1 (activa en ALTO → versión b) o cuando Z = 0 (activa en BAJO → versión c).
 
-![[03_Descripcion_de_Circuitos_Logicos/img/36.png|587]]
-
+<img src="img/36.png" width="587" alt="Fig. 3-36: tres representaciones del circuito con tres NAND">
 
 ### Niveles asignados / no asignados
 
-Es evidente que los términos asignado y no asignado son sinónimos de activo e
-inactivo, respectivamente:
+Es evidente que los términos asignado y no asignado son sinónimos de activo e inactivo, respectivamente:
 
 | Término | Significado |
 |---|---|
@@ -76,12 +75,11 @@ inactivo, respectivamente:
 | **No asignado** (unasserted) | señal en su estado **inactivo** |
 
 ### Etiquetado de señales
-- **Activa en BAJO:** nombre con **barra superior** (la barra superior es sólo una manera de enfatizar que estas señales son activas en BAJO:
+- **Activa en BAJO:** nombre con **barra superior** (la barra superior es solo una manera de enfatizar que estas señales son activas en BAJO).
 
-![[act_b.png]]
+![Etiquetas de señales activas en BAJO](img/act_b.png)
 
 - **Señales biestado:** tienen función en ambos niveles, y se etiquetan con ambos nombres, ej. **RD/WR**: ALTO = lectura (RD), BAJO = escritura (WR).
-
 
 ## 3-15 Símbolos IEEE/ANSI (Estándar 91-1984)
 
@@ -97,10 +95,10 @@ inactivo, respectivamente:
 | NAND | & + triángulo de inversión en la salida |
 | NOR | ≥1 + triángulo de inversión en la salida |
 
-![[03_Descripcion_de_Circuitos_Logicos/img/41.png|461]]
+<img src="img/41.png" width="461" alt="Fig. 3-41: símbolos IEEE/ANSI de las compuertas">
 
 El estándar IEEE/ANSI aún no es muy aceptado, aunque los libros de datos de CI suelen incluir **ambos**.
-Una NOR con salida activa en ALTO en IEEE/ANSI = rectángulo con **&** y triángulos en las entradas 
+Una NOR con salida activa en ALTO en IEEE/ANSI = rectángulo con **&** y triángulos en las entradas.
 
 ## 3-16 Resumen de métodos para describir circuitos lógicos
 
@@ -112,13 +110,11 @@ Seis formas de describir una función lógica:
 5. **Expresiones de álgebra booleana**
 6. **Diagramas de tiempos**
 
-**Ejemplo: La siguiente expresión describe la manera en que un circuito lógico necesita operar para poder controlar un indicador de advertencia del cinturón de seguridad de un
-automóvil.
+**Ejemplo:** la siguiente expresión describe la manera en que un circuito lógico necesita operar para poder controlar un indicador de advertencia del cinturón de seguridad de un automóvil.
 
->Si el conductor está presente Y (AND) el conductor NO (NOT) tiene el cinturón enganchado Y (AND) el interruptor de encendido está activado, ENTONCES encender la luz de advertencia.
+> Si el conductor está presente Y (AND) el conductor NO (NOT) tiene el cinturón enganchado Y (AND) el interruptor de encendido está activado, ENTONCES encender la luz de advertencia.
 
-Describa el circuito utilizando álgebra booleana, diagramas esquemáticos con sím-
-bolos lógicos, tablas de verdad y diagramas de tiempos.
+Describa el circuito utilizando álgebra booleana, diagramas esquemáticos con símbolos lógicos, tablas de verdad y diagramas de tiempos.
 
 `luz_advertencia = conductor_presente · cinturon_enganchado' · interruptor_encendido`
 
@@ -133,15 +129,10 @@ bolos lógicos, tablas de verdad y diagramas de tiempos.
 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 0 |
 
-![[42ab.png]]
+![Fig. 3-42 (a) y (b): esquemático y diagrama de la luz de advertencia](img/42ab.png)
 
-![[42c.png]]
+![Fig. 3-42 (c): diagrama de tiempos de la luz de advertencia](img/42c.png)
 
 Cada método sirve mejor según la situación; lo importante es **poder describir y comunicar** la operación de un sistema digital.
 
-
-
-
-
-
-**Siguiente seccion: [[35_HDL_VHDL]]**
+**Siguiente sección: [35_HDL_VHDL](35_HDL_VHDL.md)**
