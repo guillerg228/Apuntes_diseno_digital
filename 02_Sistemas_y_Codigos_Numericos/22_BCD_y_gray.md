@@ -1,6 +1,7 @@
+**Índice: [20_Indice_y_Resumen](20_Indice_y_Resumen.md)**
 
-**Indice: [[20_Indice_y_Resumen]]**
-**Seccion anterior: [[21_Conversiones_y_Hexadecimal]]**
+**Sección anterior: [21_Conversiones_y_Hexadecimal](21_Conversiones_y_Hexadecimal.md)**
+
 # BCD y Gray
 
 ## 2-4 Código BCD (Decimal Codificado en Binario)
@@ -70,7 +71,7 @@ Un número decimal de 8 dígitos en BCD = **32 bits**.
 ### Aplicación principal: codificadores de posición de eje
 Un disco giratorio produce un código binario según su posición angular. Con código Gray, al pasar de un segmento al siguiente solo cambia un bit, evitando lecturas erróneas en los límites.
 
-![Fig. 2-3: codificador de eje de 8 posiciones y 3 bits|516](img/3.png)
+![Fig. 2-3: codificador de eje de 8 posiciones y 3 bits](img/3.png)
 
 **Ejemplos (repaso 2-5):** 0101 (binario) → **0111** (Gray) · 0101 (Gray) → **0110** (binario).
 
@@ -95,7 +96,4 @@ Un disco giratorio produce un código binario según su posición angular. Con c
 | 14 | 1110 | E | 0001 0100 | 1001 |
 | 15 | 1111 | F | 0001 0101 | 1000 |
 
-
-
-
-**Siguiente seccion: [[23_Byte_Nibble_Palabra_y_ASCII]]**
+**Siguiente sección: [23_Byte_Nibble_Palabra_y_ASCII](23_Byte_Nibble_Palabra_y_ASCII.md)**
